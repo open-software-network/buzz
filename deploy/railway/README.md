@@ -44,12 +44,13 @@ not commit them.
 Set these on `buzz-minio`:
 
 ```dotenv
-RAILWAY_DOCKERFILE_PATH=deploy/railway/minio.Dockerfile
 MINIO_ROOT_USER=<stable generated access key>
 MINIO_ROOT_PASSWORD=<stable generated secret>
 BUZZ_S3_BUCKET=buzz-media
 ```
 
+Set the service root directory to `/deploy/railway`; its local `railway.json`
+selects `minio.Dockerfile` without inheriting the relay's root configuration.
 Mount a persistent Railway volume at `/data`. The entrypoint starts MinIO and
 idempotently creates the private bucket before declaring the process ready.
 
