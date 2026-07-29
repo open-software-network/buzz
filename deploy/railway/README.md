@@ -50,9 +50,10 @@ MINIO_ROOT_PASSWORD=<stable generated secret>
 BUZZ_S3_BUCKET=buzz-media
 ```
 
-Set the service root directory to `/deploy/railway`; its local `railway.json`
-selects `minio.Dockerfile` without inheriting the relay's root configuration.
-Mount a persistent Railway volume at `/data`. The entrypoint starts MinIO and
+Set the service root directory to `/deploy/railway` and the Railway config file
+path to `/deploy/railway/railway.json`. That config selects
+`minio.Dockerfile` without inheriting the relay's root configuration. Mount a
+persistent Railway volume at `/data`. The entrypoint starts MinIO and
 idempotently creates the private bucket before declaring the process ready.
 
 ## Validation
