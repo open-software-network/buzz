@@ -18,6 +18,7 @@ Set these references and Railway-specific values on `buzz-relay`:
 ```dotenv
 DATABASE_URL=${{Postgres.DATABASE_URL}}
 REDIS_URL=${{Redis.REDIS_URL}}
+PORT=3000
 BUZZ_BIND_ADDR=0.0.0.0:3000
 BUZZ_HEALTH_PORT=8080
 BUZZ_METRICS_PORT=9102
