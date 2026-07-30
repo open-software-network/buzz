@@ -26,6 +26,7 @@ Thumbs.db
 
 # Scratch / working files (AI reviews, notes, drafts)
 .scratch/
+.session-status/
 
 # Playwright artifacts
 playwright-report/
